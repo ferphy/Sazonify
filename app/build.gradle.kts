@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id("com.google.dagger.hilt.android") // Plugin para Hilt
     id("kotlin-kapt") // Necesario para la anotación @HiltViewModel
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
