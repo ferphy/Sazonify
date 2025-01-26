@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface RecipeAPI {
 
     @GET("random")
-    suspend fun getRandomRecipes(
+    suspend fun getRecipeById(
         @Query("apiKey") apiKey: String,
         @Query("number") number: Int = 10
     ): RecipeById
@@ -16,6 +16,7 @@ interface RecipeAPI {
     //Aqui si buscas pasta te devuelve id//TItle//IMAGE//IMAGETYPE
     @GET("complexSearch")
     suspend fun getRecipes(
+        @Query("query") query: String? = null,
         @Query("apiKey") apiKey: String,
         @Query("sort") sort: String? = null,
         @Query("maxReadyTime") maxReadyTime: Int? = null,

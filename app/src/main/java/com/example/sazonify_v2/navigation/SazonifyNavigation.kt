@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.example.sazonify_v2.screens.HomeScreen
+import com.example.sazonify_v2.screens.HomeViewModel
 
 @Composable
 fun SazonifyNavigation(){
@@ -17,7 +18,12 @@ fun SazonifyNavigation(){
         startDestination = HomeScreenRoute
     ){
         composable<HomeScreenRoute>{
-            HomeScreen()
+
+            val viewModel: HomeViewModel = hiltViewModel()
+            HomeScreen(
+                viewModel = viewModel,
+                navController = navController
+            )
         }
 
     }
