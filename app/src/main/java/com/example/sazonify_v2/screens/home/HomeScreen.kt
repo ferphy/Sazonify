@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -22,8 +24,10 @@ import androidx.navigation.NavHostController
 import com.example.sazonify_v2.data.DataOrException
 import com.example.sazonify_v2.model.recipeByQuery.RecipeByQueryList
 import com.example.sazonify_v2.ui.theme.customColors
+import com.example.sazonify_v2.widgets.CategoryCard
 import com.example.sazonify_v2.widgets.SmallRecipeCard
 import com.example.sazonify_v2.widgets.TitleWithViewAll
+import com.example.sazonify_v2.widgets.TopAppBarWithSearch
 
 @Composable
 fun HomeScreen(
@@ -40,7 +44,9 @@ fun HomeScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .verticalScroll(rememberScrollState())
     ) {
+        TopAppBarWithSearch(navController)
         HomeScreenContent(
             recipesBySort = recipesBySort.value,
             recipesByTime = recipesByTime.value,
@@ -49,6 +55,8 @@ fun HomeScreen(
         )
     }
 }
+
+
 
 @Composable
 fun HomeScreenContent(
@@ -66,12 +74,31 @@ fun HomeScreenContent(
 
 
 @Composable
-fun CategoryRow(recipesByType: HomeViewModel, navController: NavHostController) {
+fun CategoryRow(
+    recipesByType: HomeViewModel,
+    navController: NavHostController
+) {
+
+    val categories = recipesByType.foodCategories.entries.shuffled().take(5)
+
     TitleWithViewAll(
-        title = "Featured Recipes",
+        title = "Categories",
         modifier = Modifier.padding(14.dp),
-        navController = navController
+        navController = navController,
     )
+    LazyRow(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(14.dp),
+        contentPadding = PaddingValues(horizontal = 14.dp)
+    ) {
+        items(categories.size) { index ->
+            CategoryCard(
+                title = categories[index].key,
+                image = categories[index].value,
+                navController = navController
+            )
+        }
+    }
 }
 
 @Composable
@@ -136,5 +163,6 @@ fun <T> DisplayRecipesRow(
         }
     }
 }
+
 
 

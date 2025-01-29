@@ -2,6 +2,7 @@ package com.example.sazonify_v2.screens.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.sazonify_v2.R
 import com.example.sazonify_v2.data.DataOrException
 import com.example.sazonify_v2.model.recipeByQuery.RecipeByQueryList
 import com.example.sazonify_v2.repository.HomeRepository
@@ -71,5 +72,19 @@ class HomeViewModel @Inject constructor(
     fun getRecipesByTime(time: Int, number: Int = 10) {
         fetchRecipes(_recipesByTime, maxReadyTime = time, number = number)
     }
+
+    // Map of food categories
+    val foodCategories = mapOf(
+        "Burgers" to R.drawable.burger_category,
+        "Pasta" to R.drawable.pasta_category,
+        "Pizza" to R.drawable.pizza_category,
+        "Salads" to R.drawable.salads_categoy,
+        "Grilled" to R.drawable.grilled_category,
+        "Seafood" to R.drawable.seafood_category,
+        "Sushi" to R.drawable.sushi_category,
+        "Soups & Stews" to R.drawable.soups_category,
+        "Desserts" to R.drawable.desserts_category,
+        "Tacos & Wraps" to R.drawable.tacos_category
+    )
 }
 
