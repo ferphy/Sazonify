@@ -21,14 +21,14 @@ class SearchViewModel @Inject constructor(private val repository: SearchReposito
 
     private fun fetchRecipes(
         flow: MutableStateFlow<DataOrException<RecipeByQueryList, Boolean, Exception>>,
-        type: String? = null,
+        query: String? = null,
         number: Int = 10
     ) {
         viewModelScope.launch {
             flow.value = DataOrException(loading = true)
             try {
                 val result = repository.getRecipes(
-                    type = type,
+                    query = query,
                     number = number
                 )
                 flow.value = result
@@ -38,8 +38,8 @@ class SearchViewModel @Inject constructor(private val repository: SearchReposito
         }
     }
 
-    fun getRecipesByType(type: String, number: Int = 10) {
-        fetchRecipes(_recipesByType, type = type, number = number)
+    fun getRecipesByType(query: String, number: Int = 10) {
+        fetchRecipes(_recipesByType, query = query, number = number)
     }
 
 }

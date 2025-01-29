@@ -9,13 +9,13 @@ import javax.inject.Inject
 class SearchRepository@Inject constructor(private val apiService: RecipeAPI) {
 
     suspend fun getRecipes(
-        type: String? = null,
+        query: String? = null,
         number: Int = 10
     ): DataOrException<RecipeByQueryList, Boolean, Exception> {
         return try {
             val response = apiService.getRecipes(
                 apiKey = API_KEY,
-                type = type,
+                query = query,
                 number = number
             )
             DataOrException(data = response)

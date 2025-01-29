@@ -25,6 +25,7 @@ import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.example.sazonify_v2.R
 import com.example.sazonify_v2.navigation.DetailScreenRoute
+import com.example.sazonify_v2.navigation.SearchScreenRoute
 
 @Preview(showBackground = true)
 @Composable
@@ -44,6 +45,9 @@ fun CategoryCard(
             modifier = Modifier
                 .size(200.dp)
                 .clickable {
+                    navController.navigate(SearchScreenRoute(
+                        title = title
+                    ))
                 },
             shape = CircleShape
         ) {

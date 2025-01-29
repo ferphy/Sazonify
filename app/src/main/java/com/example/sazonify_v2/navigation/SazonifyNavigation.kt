@@ -10,6 +10,7 @@ import com.example.sazonify_v2.screens.detail.DetailScreen
 import com.example.sazonify_v2.screens.home.HomeScreen
 import com.example.sazonify_v2.screens.home.HomeViewModel
 import com.example.sazonify_v2.screens.search.SearchScreen
+import com.example.sazonify_v2.screens.search.SearchViewModel
 
 @Composable
 fun SazonifyNavigation() {
@@ -38,10 +39,13 @@ fun SazonifyNavigation() {
         }
         composable<SearchScreenRoute> {
 
+            val viewModel: SearchViewModel = hiltViewModel()
+
             val argsSearch = it.toRoute<SearchScreenRoute>()
             SearchScreen(
                 navController = navController,
                 title = argsSearch.title,
+                viewModel = viewModel
             )
         }
 
