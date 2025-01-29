@@ -93,7 +93,7 @@ fun Sazonify_v2Theme(
     CompositionLocalProvider(LocalCustomColors provides customColors) {
         MaterialTheme(
             colorScheme = colorScheme,
-            typography = Typography,
+            typography = CustomTypography,
             content = content
         )
     }

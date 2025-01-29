@@ -1,7 +1,7 @@
 package com.example.sazonify_v2.di
 
 import com.example.sazonify_v2.network.RecipeAPI
-import com.example.sazonify_v2.widgets.Constants.BASE_URL
+import com.example.sazonify_v2.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

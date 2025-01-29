@@ -5,3 +5,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 data object HomeScreenRoute{}
 
+@Serializable
+data class DetailScreenRoute(
+    val recipeId: String
+)
