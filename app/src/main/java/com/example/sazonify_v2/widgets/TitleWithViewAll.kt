@@ -1,6 +1,7 @@
 package com.example.sazonify_v2.widgets
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -20,17 +21,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.sazonify_v2.R
+import com.example.sazonify_v2.navigation.SearchScreenRoute
 import com.example.sazonify_v2.ui.theme.customColors
 
 
-@Preview(showBackground = true)
 @Composable
 fun TitleWithViewAll(
     title: String = "Featured Recipes",
     modifier: Modifier,
     navController: NavHostController,
 ) {
-
 
     Box(
         modifier = modifier
@@ -48,7 +48,7 @@ fun TitleWithViewAll(
             Text(
                 text = title,
                 style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.Bold      ,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.customColors.title
             )
 
@@ -59,7 +59,15 @@ fun TitleWithViewAll(
                 ),
                 fontWeight = FontWeight.Normal,
                 color = MaterialTheme.customColors.subtitle,
-                modifier = Modifier.padding(end = 8.dp)
+                modifier = Modifier
+                    .padding(end = 8.dp)
+                    .clickable {
+                        navController.navigate(
+                            SearchScreenRoute(
+                                title
+                            )
+                        )
+                    }
             )
 
         }

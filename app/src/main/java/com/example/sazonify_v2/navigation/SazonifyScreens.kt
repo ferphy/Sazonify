@@ -9,3 +9,8 @@ data object HomeScreenRoute{}
 data class DetailScreenRoute(
     val recipeId: String
 )
+
+@Serializable
+data class SearchScreenRoute(
+    val title: String,
+)

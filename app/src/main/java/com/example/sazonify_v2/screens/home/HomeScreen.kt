@@ -32,7 +32,7 @@ import com.example.sazonify_v2.widgets.TopAppBarWithSearch
 @Composable
 fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel(),
-    navController: NavHostController
+    navController: NavHostController,
 ) {
     val recipesBySort = viewModel.recipesBySort.collectAsState()
     val recipesByTime = viewModel.recipesByTime.collectAsState()
