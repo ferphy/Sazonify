@@ -6,16 +6,44 @@
 
 ## 🚀 Features
 
-### Home Screen:
-- **Recipes by Category:** Explore recipes for breakfast, lunch, desserts, and more.
-- **Popular Recipes:** Discover the most popular recipes based on Spoonacular data.
-- **Quick Recipes:** Find recipes that you can prepare in 15 minutes or less.
-- **Ingredient Search:** Enter the ingredients you have at home and get relevant recipes.
+### **Home Screen**  
+- **Recipes by Category:** Explore recipes for breakfast, lunch, desserts, and more.  
+- **Popular Recipes:** Discover the most popular recipes based on Spoonacular data.  
+- **Quick Recipes:** Find recipes that you can prepare in 15 minutes or less.  
+- **Ingredient Search:** Enter the ingredients you have at home and get relevant recipes.  
 
-### Detail Screen:
-- Full recipe details, including ingredients, preparation steps, and total time.
+### **Detail Screen**  
+- Full recipe details, including ingredients, preparation steps, and total time.  
+
+### **Search Screen**  
+- **Smart Search:** Find recipes using keywords, ingredients, or cuisine preferences.  
+- **Advanced Filters:** Filter results by cooking time, difficulty level, and dietary preferences.  
+- **Search History:** Quickly access previously searched recipes.  
+
+### **Grocery Screen**  
+- **Shopping List:** Automatically generate a grocery list based on selected recipes.  
+- **Ingredient Management:** Add, remove, or check off ingredients as you shop.  
 
 ---
+
+## 🖼️ Screenshots
+
+<div align="center">
+
+### Home Screen
+<img src="app/src/main/res/drawable/homescreen.png" width="400" alt="Home Screen">
+
+### Detail Screen
+<img src="app/src/main/res/drawable/detailscreen.png" width="400" alt="Detail Screen">
+
+### Search Screen
+<img src="app/src/main/res/drawable/searchscreen.png" width="400" alt="Search Screen">
+
+### Grocery Screen
+<img src="app/src/main/res/drawable/groceryscreen.png" width="400" alt="Grocery Screen">
+
+</div>
+
 
 ## 🛠️ Technologies Used
 
@@ -84,24 +112,6 @@ set SPOONACULAR_API_KEY=your_api_key_here
 3. Press **Run**.
 
 ---
-
-## 🖼️ Screenshots
-
-<div align="center">
-
-### Home Screen
-<img src="app/src/main/res/drawable/homescreen.png" width="400" alt="Home Screen">
-
-### Detail Screen
-<img src="app/src/main/res/drawable/detailscreen.png" width="400" alt="Detail Screen">
-
-### Search Screen
-<img src="app/src/main/res/drawable/searchscreen.png" width="400" alt="Search Screen">
-
-### Grocery Screen
-<img src="app/src/main/res/drawable/groceryscreen.png" width="400" alt="Grocery Screen">
-
-</div>
 
 ## 🌟 Upcoming Features
 
