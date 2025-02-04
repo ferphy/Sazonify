@@ -1,131 +1,143 @@
 # 🍳 Sazonify
 
-**Sazonify** es una aplicación de recetas que te ayuda a explorar, buscar, y descubrir nuevas ideas culinarias. Con funcionalidades como búsquedas por categorías, ordenación por popularidad y resultados personalizados, esta app aprovecha la API de Spoonacular para ofrecer una experiencia culinaria completa.
+**Sazonify** is a recipe application that helps you explore, search for, and discover new culinary ideas. With features such as category searches, sorting by popularity, and personalized results, this app leverages the Spoonacular API to provide a complete culinary experience.
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-### Pantalla Principal:
-- **Recetas por Categorías:** Explora recetas de desayunos, almuerzos, postres, y más.
-- **Recetas Populares:** Descubre las recetas más populares según los datos de Spoonacular.
-- **Recetas Rápidas:** Encuentra recetas que puedes preparar en 15 minutos o menos.
-- **Búsqueda por Ingredientes:** Ingresa los ingredientes que tienes en casa y obtén recetas relevantes.
+### Home Screen:
+- **Recipes by Category:** Explore recipes for breakfast, lunch, desserts, and more.
+- **Popular Recipes:** Discover the most popular recipes based on Spoonacular data.
+- **Quick Recipes:** Find recipes that you can prepare in 15 minutes or less.
+- **Ingredient Search:** Enter the ingredients you have at home and get relevant recipes.
 
-### Pantalla Detalle:
-- Detalles completos de la receta, incluidos ingredientes, pasos de preparación, y tiempo total.
+### Detail Screen:
+- Full recipe details, including ingredients, preparation steps, and total time.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 🛠️ Technologies Used
 
 ### Frontend:
-- **Kotlin:** Lenguaje principal para la app.
-- **Jetpack Compose:** Framework moderno de UI declarativa de Android.
+- **Kotlin:** Main language for the app.
+- **Jetpack Compose:** Modern declarative UI framework for Android.
 
 ### Backend/API:
-- **Spoonacular API:** Base de datos de recetas.
-  - [Documentación oficial](https://spoonacular.com/food-api).
+- **Spoonacular API:** Recipe database.
+  - [Official Documentation](https://spoonacular.com/food-api).
 
-### Dependencias Clave:
-- **Retrofit:** Llamadas a la API.
-- **Hilt:** Inyección de dependencias.
-- **StateFlow:** Manejo de estados reactivos.
-
----
-
-## 🏗️ Arquitectura
-
-- **MVVM (Model-View-ViewModel):** Separación clara de la lógica de negocios y la UI.
-- **Repository Pattern:** Para manejar las llamadas a la API.
-- **StateFlow:** Para manejar estados reactivos y actualizaciones en tiempo real.
+### Key Dependencies:
+- **Retrofit:** API calls.
+- **Hilt:** Dependency injection.
+- **StateFlow:** Handling reactive states.
 
 ---
 
-## 🔧 Configuración
+## 🏗️ Architecture
 
-### Paso 1: Clona este Repositorio
+- **MVVM (Model-View-ViewModel):** Clear separation between business logic and UI.
+- **Repository Pattern:** To handle API calls.
+- **StateFlow:** To manage reactive states and real-time updates.
+
+---
+
+## 🔧 Setup
+
+### Step 1: Clone this Repository
 ```bash
-git clone https://github.com/tu-usuario/sazonify.git
+git clone https://github.com/your-username/sazonify.git
 ```
 
-### Paso 2: Obtén una API Key de Spoonacular
-1. Ve a [Spoonacular API](https://spoonacular.com/food-api).
-2. Regístrate e inicia sesión.
-3. Crea un nuevo proyecto y copia tu API Key.
+### Step 2: Obtain a Spoonacular API Key
+1. Go to [Spoonacular API](https://spoonacular.com/food-api).
+2. Sign up and log in.
+3. Create a new project and copy your API key.
 
 ---
-### Paso 3: Configura la API Key
-1. Abre el archivo `local.properties` (crea uno si no existe).
-2. Agrega tu clave:
+### Step 3: Configure the API Key
+1. Open the `local.properties` file (create one if it doesn't exist).
+2. Add your key:
    ```properties
    SPOONACULAR_API_KEY=your_api_key_here
-### Paso 4: Configura Variables de Entorno (Opcional)
-Si prefieres usar variables de entorno, sigue estos pasos:
+### Step 4: Set Up Environment Variables (Optional)
+
+If you prefer to use environment variables, follow these steps:
 
 #### Mac/Linux:
 ```bash
 export SPOONACULAR_API_KEY=your_api_key_here
 ```
+
 #### Windows:
 ```cmd
 set SPOONACULAR_API_KEY=your_api_key_here
 ```
-### Paso 5: Ejecuta la App
-1. Abre el proyecto en Android Studio.
-2. Conéctate a un dispositivo o emulador.
-3. Presiona **Run**.
+
+### Step 5: Run the App
+
+1. Open the project in Android Studio.
+2. Connect a device or emulator.
+3. Press **Run**.
 
 ---
 
-## 🖼️ Capturas de Pantalla
+## 🖼️ Screenshots
 
-### Pantalla Principal
-![Pantalla Principal](https://via.placeholder.com/600x400?text=Pantalla+Principal)
+### Home Screen
+[![Home Screen](https://via.placeholder.com/600x400?text=Home+Screen)](https://imgur.com/a/4VImy7I)
 
-### Pantalla Detalle
-![Pantalla Detalle](https://via.placeholder.com/600x400?text=Pantalla+Detalle)
+### Detail Screen
+[![Detail Screen](https://via.placeholder.com/600x400?text=Detail+Screen)](https://imgur.com/a/7jDoizw)
 
----
+### Search Screen
+[![Search Screen](https://via.placeholder.com/600x400?text=Search+Screen)](https://imgur.com/a/Kqs1Z4s)
 
-## 🌟 Próximas Funcionalidades
-- Guardar recetas como favoritas.
-- Modo oscuro.
-- Lista de compras generada automáticamente.
-- Compatibilidad con múltiples idiomas.
+### Grocery Screen
+[![Grocery Screen](https://via.placeholder.com/600x400?text=Grocery+Screen)](https://imgur.com/a/a8PpjDF)
 
 ---
 
-## 📜 Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+## 🌟 Upcoming Features
+
+- Save recipes as favorites.
+- Dark mode.
+- Automatically generated shopping list.
+- Multi-language support.
 
 ---
 
-## 🤝 Contribuciones
-¡Contribuciones, problemas y solicitudes de características son bienvenidos! Para contribuir:
+## 📜 License
 
-1. Haz un fork del proyecto.
-2. Crea una nueva rama:
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+---
+
+## 🤝 Contributions
+
+Contributions, issues, and feature requests are welcome! To contribute:
+
+1. Fork the project.
+2. Create a new branch:
    ```bash
-   git checkout -b mi-nueva-funcionalidad
+   git checkout -b my-new-feature
    ```
-
-### Realiza los cambios y confirma:
-```bash
-git commit -m 'Añadir nueva funcionalidad'
-```
-
-### Envía los cambios a tu fork:
-```bash
-git push origin mi-nueva-funcionalidad
-```
-### Crea un Pull Request
+3. Make your changes and commit:
+   ```bash
+   git commit -m 'Add new feature'
+   ```
+4. Push your changes to your fork:
+   ```bash
+   git push origin my-new-feature
+   ```
+5. Create a Pull Request.
 
 ---
 
-## ✨ Créditos
+## ✨ Credits
+
 - **API:** [Spoonacular API](https://spoonacular.com/food-api)
-- **Desarrollador:** Fernando González.
+- **Developer:** Fernando González
 
 
 
