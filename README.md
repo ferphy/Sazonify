@@ -85,16 +85,16 @@ set SPOONACULAR_API_KEY=your_api_key_here
 ## 🖼️ Screenshots
 
 ### Home Screen
-![Home Screen]([https://via.placeholder.com/600x400?text=Home+Screen](https://imgur.com/a/4VImy7I))
+[![Home Screen](https://via.placeholder.com/600x400?text=Home+Screen)](https://imgur.com/a/4VImy7I)
 
 ### Detail Screen
-![Detail Screen]([https://via.placeholder.com/600x400?text=Detail+Screen](https://imgur.com/a/7jDoizw))
+[![Detail Screen](https://via.placeholder.com/600x400?text=Detail+Screen)](https://imgur.com/a/7jDoizw)
 
 ### Search Screen
-![Search Screen]([[https://via.placeholder.com/600x400?text=Detail+Screen](https://imgur.com/a/7jDoizw)](https://imgur.com/a/Kqs1Z4s))
+[![Search Screen](https://via.placeholder.com/600x400?text=Search+Screen)](https://imgur.com/a/Kqs1Z4s)
 
 ### Grocery Screen
-![Grocery Screen]([[https://via.placeholder.com/600x400?text=Detail+Screen](https://imgur.com/a/7jDoizw)](https://imgur.com/a/a8PpjDF))
+[![Grocery Screen](https://via.placeholder.com/600x400?text=Grocery+Screen)](https://imgur.com/a/a8PpjDF)
 
 ---
 
