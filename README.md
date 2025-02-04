@@ -20,21 +20,20 @@
 ## 🛠️ Technologies Used
 
 ### Frontend:
-- **Kotlin:** Main programming language for the app (v2.0.0).
-- **Jetpack Compose:** Modern declarative UI framework for Android, including Compose BOM, Activity Compose, UI, Material, and Material3 components.
-- **AndroidX Core KTX:** Provides Kotlin extensions to simplify Android development (v1.15.0).
-- **Navigation Compose:** Declarative navigation between screens (v2.8.5).
+- **Kotlin:** Main programming language for the app.
+- **Jetpack Compose:** Modern declarative UI framework for Android.
+- **Navigation Compose:** Declarative navigation between screens.
 
 ### Backend/API:
-- **Retrofit:** For making API calls and handling HTTP networking (v2.9.0).
-- **OkHttp:** For network logging and intercepting HTTP requests (v4.11.0).
-- **Kotlin Coroutines:** For asynchronous programming and handling background tasks (v1.7.3).
-- **Room:** Local data persistence with a simple abstraction over SQLite (v2.6.1).
+- **Retrofit:** For making API calls and handling HTTP networking.
+- **OkHttp:** For network logging and intercepting HTTP requests.
+- **Kotlin Coroutines:** For asynchronous programming and handling background tasks.
+- **Room:** Local data persistence with a simple abstraction over SQLite.
 
 ### Key Dependencies:
-- **Hilt:** Dependency injection framework to manage and provide app-wide dependencies (v2.48).
-- **Coil:** Image loading library optimized for Android and Compose (v2.4.0).
-- **Kotlinx Serialization:** For JSON serialization and deserialization (v1.6.3).
+- **Hilt:** Dependency injection framework to manage and provide app-wide dependencies.
+- **Coil:** Image loading library optimized for Android and Compose.
+- **Kotlinx Serialization:** For JSON serialization and deserialization.
 
 ---
 
