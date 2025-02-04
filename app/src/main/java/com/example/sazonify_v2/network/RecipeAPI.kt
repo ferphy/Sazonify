@@ -24,4 +24,5 @@ interface RecipeAPI {
         @Query("diet") diet: String? = null,
         @Query("number") number: Int = 10
     ): RecipeByQueryList
+
 }

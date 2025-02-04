@@ -34,14 +34,14 @@ fun SmallRecipeCard(
 ) {
 
     Column(
-        modifier = Modifier.height(200.dp).width(150.dp),
+        modifier = Modifier.height(180.dp).width(142.dp),
         horizontalAlignment = Alignment.Start,
         verticalArrangement = Arrangement.SpaceBetween
     ) {
 
         Card(
             modifier = Modifier
-                .size(150.dp)
+                .size(142.dp)
                 .clickable {
                     navController.navigate(
                         DetailScreenRoute(
@@ -61,7 +61,7 @@ fun SmallRecipeCard(
             text = title,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
-            style = MaterialTheme.typography.titleMedium,
+            style = MaterialTheme.typography.titleSmall,
         )
     }
 

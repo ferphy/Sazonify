@@ -6,7 +6,7 @@ import com.example.sazonify_v2.network.RecipeAPI
 import com.example.sazonify_v2.utils.Constants.API_KEY
 import javax.inject.Inject
 
-class SearchRepository@Inject constructor(private val apiService: RecipeAPI) {
+class SearchRepository @Inject constructor(private val apiService: RecipeAPI) {
 
     suspend fun getRecipes(
         query: String? = null,

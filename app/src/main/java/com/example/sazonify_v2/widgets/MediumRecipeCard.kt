@@ -24,6 +24,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -43,14 +45,19 @@ fun MediumRecipeCard(
     title: String = "Chicken Rice Bowl",
     image: String = "Chicken Rice Bowl",
     recipeId: String = "1",
-    navController: NavHostController = NavHostController(LocalContext.current)
+    navController: NavHostController = NavHostController(LocalContext.current),
+    isClicked: (Boolean) -> Unit = {}
 ) {
+
+    val isFavorite = remember { mutableStateOf(false) }
+
+
 
 
     Card(
         modifier = Modifier
-            .height(360.dp)
-            .width(415.dp)
+            .height(300.dp)
+            .width(360.dp)
             .clickable {
                 navController.navigate(
                     DetailScreenRoute(
@@ -71,14 +78,14 @@ fun MediumRecipeCard(
 
 
             Card(
-                modifier = Modifier.fillMaxWidth().height(234.dp),
+                modifier = Modifier.fillMaxWidth().height(200.dp),
                 shape = MaterialTheme.shapes.large
             ){
                 AsyncImage(
                     model = image,
                     contentDescription = title,
                     contentScale = ContentScale.Crop,
-                    modifier = Modifier.fillMaxWidth().height(234.dp)
+                    modifier = Modifier.fillMaxWidth().height(200.dp)
                 )
             }
 
@@ -94,7 +101,7 @@ fun MediumRecipeCard(
                     Column {
                         Text(
                             text = title,
-                            style = MaterialTheme.typography.headlineSmall,
+                            style = MaterialTheme.typography.bodyLarge,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.customColors.title,
                             maxLines = 1,
@@ -118,14 +125,27 @@ fun MediumRecipeCard(
                         )
                     }
 
+                    if (isFavorite.value){
+                        Icon(
+                            modifier = Modifier.size(30.dp).clickable {
+                                isFavorite.value = false
+                                isClicked.invoke(false)
+                            },
+                            imageVector = Icons.Default.Bookmark,
+                            contentDescription = "Remove from favorites",
+                            tint = MaterialTheme.customColors.special
+                        )
+                    }else{
+                        Icon(
+                            modifier = Modifier.size(30.dp).clickable {
+                                isFavorite.value = true
+                                isClicked.invoke(true)
+                            },
+                            imageVector = Icons.Default.BookmarkBorder,
+                            contentDescription = "make it fav",
+                        )
+                    }
 
-                    Icon(
-                        modifier = Modifier.size(30.dp).clickable {
-                            //IMPLEMENTAR ALMACENAR EN ROOM
-                        },
-                        imageVector = Icons.Default.BookmarkBorder,
-                        contentDescription = "make it fav",
-                    )
                 }
                 
 

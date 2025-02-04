@@ -17,10 +17,6 @@ class HomeViewModel @Inject constructor(
     private val repository: HomeRepository
 ) : ViewModel() {
 
-    private val _recipesByType =
-        MutableStateFlow<DataOrException<RecipeByQueryList, Boolean, Exception>>(DataOrException(loading = false))
-    val recipesByType: StateFlow<DataOrException<RecipeByQueryList, Boolean, Exception>> = _recipesByType
-
     private val _recipesBySort =
         MutableStateFlow<DataOrException<RecipeByQueryList, Boolean, Exception>>(DataOrException(loading = false))
     val recipesBySort: StateFlow<DataOrException<RecipeByQueryList, Boolean, Exception>> = _recipesBySort
@@ -61,9 +57,6 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    fun getRecipesByType(type: String, number: Int = 10) {
-        fetchRecipes(_recipesByType, type = type, number = number)
-    }
 
     fun getRecipesBySort(sort: String, number: Int = 10) {
         fetchRecipes(_recipesBySort, sort = sort, number = number)
