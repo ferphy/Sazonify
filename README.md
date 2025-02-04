@@ -84,19 +84,21 @@ set SPOONACULAR_API_KEY=your_api_key_here
 
 ## 🖼️ Screenshots
 
+<div align="center">
+
 ### Home Screen
-[![Home Screen](https://via.placeholder.com/600x400?text=Home+Screen)](https://imgur.com/a/4VImy7I)
+<img src="app/src/main/res/drawable/homescreen.png" width="400" alt="Home Screen">
 
 ### Detail Screen
-[![Detail Screen](https://via.placeholder.com/600x400?text=Detail+Screen)](https://imgur.com/a/7jDoizw)
+<img src="app/src/main/res/drawable/detailscreen.png" width="400" alt="Detail Screen">
 
 ### Search Screen
-[![Search Screen](https://via.placeholder.com/600x400?text=Search+Screen)](https://imgur.com/a/Kqs1Z4s)
+<img src="app/src/main/res/drawable/searchscreen.png" width="400" alt="Search Screen">
 
 ### Grocery Screen
-[![Grocery Screen](https://via.placeholder.com/600x400?text=Grocery+Screen)](https://imgur.com/a/a8PpjDF)
+<img src="app/src/main/res/drawable/groceryscreen.png" width="400" alt="Grocery Screen">
 
----
+</div>
 
 ## 🌟 Upcoming Features
 
@@ -137,7 +139,7 @@ Contributions, issues, and feature requests are welcome! To contribute:
 ## ✨ Credits
 
 - **API:** [Spoonacular API](https://spoonacular.com/food-api)
-- **Developer:** Fernando González
+- **Developer:** Fernando González Laso
 
 
 
