@@ -6,31 +6,62 @@
 
 ## 🚀 Features
 
-### Home Screen:
-- **Recipes by Category:** Explore recipes for breakfast, lunch, desserts, and more.
-- **Popular Recipes:** Discover the most popular recipes based on Spoonacular data.
-- **Quick Recipes:** Find recipes that you can prepare in 15 minutes or less.
-- **Ingredient Search:** Enter the ingredients you have at home and get relevant recipes.
+### **Home Screen**  
+- **Recipes by Category:** Explore recipes for breakfast, lunch, desserts, and more.  
+- **Popular Recipes:** Discover the most popular recipes based on Spoonacular data.  
+- **Quick Recipes:** Find recipes that you can prepare in 15 minutes or less.  
+- **Ingredient Search:** Enter the ingredients you have at home and get relevant recipes.  
 
-### Detail Screen:
-- Full recipe details, including ingredients, preparation steps, and total time.
+### **Detail Screen**  
+- Full recipe details, including ingredients, preparation steps, and total time.  
+
+### **Search Screen**  
+- **Smart Search:** Find recipes using keywords, ingredients, or cuisine preferences.  
+- **Advanced Filters:** Filter results by cooking time, difficulty level, and dietary preferences.  
+- **Search History:** Quickly access previously searched recipes.  
+
+### **Grocery Screen**  
+- **Shopping List:** Automatically generate a grocery list based on selected recipes.  
+- **Ingredient Management:** Add, remove, or check off ingredients as you shop.  
 
 ---
+
+## 🖼️ Screenshots
+
+<div align="center">
+
+### Home Screen
+<img src="app/src/main/res/drawable/homescreen.png" width="400" alt="Home Screen">
+
+### Detail Screen
+<img src="app/src/main/res/drawable/detailscreen.png" width="400" alt="Detail Screen">
+
+### Search Screen
+<img src="app/src/main/res/drawable/searchscreen.png" width="400" alt="Search Screen">
+
+### Grocery Screen
+<img src="app/src/main/res/drawable/groceryscreen.png" width="400" alt="Grocery Screen">
+
+</div>
+
 
 ## 🛠️ Technologies Used
 
 ### Frontend:
-- **Kotlin:** Main language for the app.
+- **Kotlin:** Main programming language for the app.
 - **Jetpack Compose:** Modern declarative UI framework for Android.
+- **Navigation Compose:** Declarative navigation between screens.
 
 ### Backend/API:
-- **Spoonacular API:** Recipe database.
-  - [Official Documentation](https://spoonacular.com/food-api).
+- **Retrofit:** For making API calls and handling HTTP networking.
+- **OkHttp:** For network logging and intercepting HTTP requests.
+- **Kotlin Coroutines:** For asynchronous programming and handling background tasks.
+- **Room:** Local data persistence with a simple abstraction over SQLite.
 
 ### Key Dependencies:
-- **Retrofit:** API calls.
-- **Hilt:** Dependency injection.
-- **StateFlow:** Handling reactive states.
+- **Hilt:** Dependency injection framework to manage and provide app-wide dependencies.
+- **Coil:** Image loading library optimized for Android and Compose.
+- **Kotlinx Serialization:** For JSON serialization and deserialization.
 
 ---
 
@@ -82,22 +113,6 @@ set SPOONACULAR_API_KEY=your_api_key_here
 
 ---
 
-## 🖼️ Screenshots
-
-### Home Screen
-[![Home Screen](https://via.placeholder.com/600x400?text=Home+Screen)](https://imgur.com/a/4VImy7I)
-
-### Detail Screen
-[![Detail Screen](https://via.placeholder.com/600x400?text=Detail+Screen)](https://imgur.com/a/7jDoizw)
-
-### Search Screen
-[![Search Screen](https://via.placeholder.com/600x400?text=Search+Screen)](https://imgur.com/a/Kqs1Z4s)
-
-### Grocery Screen
-[![Grocery Screen](https://via.placeholder.com/600x400?text=Grocery+Screen)](https://imgur.com/a/a8PpjDF)
-
----
-
 ## 🌟 Upcoming Features
 
 - Save recipes as favorites.
@@ -137,7 +152,7 @@ Contributions, issues, and feature requests are welcome! To contribute:
 ## ✨ Credits
 
 - **API:** [Spoonacular API](https://spoonacular.com/food-api)
-- **Developer:** Fernando González
+- **Developer:** Fernando González Laso
 
 
 
