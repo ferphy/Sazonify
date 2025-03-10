@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.sazonify_v2.navigation.SazonifyNavigation
 import com.example.sazonify_v2.ui.theme.Sazonify_v2Theme
+import com.example.sazonify_v2.widgets.BottomBar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -23,18 +24,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Sazonify_v2Theme {
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                ) { innerPadding ->
-                    Surface(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(innerPadding)
-                    ) {
-                        SazonifyNavigation()
-                    }
-                }
+                SazonifyNavigation()
+
             }
         }
     }
 }
+

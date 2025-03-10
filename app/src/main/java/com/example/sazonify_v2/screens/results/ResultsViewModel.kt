@@ -1,11 +1,10 @@
-package com.example.sazonify_v2.screens.search
+package com.example.sazonify_v2.screens.results
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.sazonify_v2.data.DataOrException
 import com.example.sazonify_v2.model.recipeByQuery.RecipeByQueryList
 import com.example.sazonify_v2.repository.SearchRepository
-import com.example.sazonify_v2.utils.Constants.API_KEY
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -13,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SearchViewModel @Inject constructor(private val repository: SearchRepository) : ViewModel() {
+class ResultsViewModel @Inject constructor(private val repository: SearchRepository) : ViewModel() {
 
     private val _recipesByType =
         MutableStateFlow<DataOrException<RecipeByQueryList, Boolean, Exception>>(DataOrException(loading = false))

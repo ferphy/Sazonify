@@ -3,14 +3,15 @@ package com.example.sazonify_v2.network
 import com.example.sazonify_v2.model.recipeByQuery.RecipeByQueryList
 import com.example.sazonify_v2.model.searchById.RecipeById
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface RecipeAPI {
 
-    @GET("random")
-    suspend fun getRecipeById(
-        @Query("apiKey") apiKey: String,
-        @Query("number") number: Int = 10
+    @GET("{id}/information")
+    suspend fun findById(
+        @Path("id") recipeId: String,
+        @Query("apiKey") apiKey: String
     ): RecipeById
 
     //Aqui si buscas pasta te devuelve id//TItle//IMAGE//IMAGETYPE

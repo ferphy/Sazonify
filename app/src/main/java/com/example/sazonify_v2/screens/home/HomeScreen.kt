@@ -12,6 +12,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -23,8 +24,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.example.sazonify_v2.data.DataOrException
 import com.example.sazonify_v2.model.recipeByQuery.RecipeByQueryList
+import com.example.sazonify_v2.navigation.HomeScreenRoute
 import com.example.sazonify_v2.ui.theme.customColors
 import com.example.sazonify_v2.utils.DisplayRecipesRow
+import com.example.sazonify_v2.widgets.BottomBar
 import com.example.sazonify_v2.widgets.CategoryCard
 import com.example.sazonify_v2.widgets.SmallRecipeCard
 import com.example.sazonify_v2.widgets.TitleWithViewAll
@@ -42,18 +45,24 @@ fun HomeScreen(
         viewModel.getRecipesBySort(sort = "popularity")
         viewModel.getRecipesByTime(time = 15)
     }
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .verticalScroll(rememberScrollState())
-    ) {
-        TopAppBarWithSearch(navController)
-        HomeScreenContent(
-            recipesBySort = recipesBySort.value,
-            recipesByTime = recipesByTime.value,
-            navController = navController,
-            viewModel = viewModel
-        )
+    Scaffold(
+        modifier = Modifier.fillMaxSize(),
+        bottomBar = { BottomBar(navController = navController, actualPage = HomeScreenRoute)}
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .verticalScroll(rememberScrollState())
+        ) {
+            TopAppBarWithSearch(navController, modifier = Modifier.padding(14.dp))
+            HomeScreenContent(
+                recipesBySort = recipesBySort.value,
+                recipesByTime = recipesByTime.value,
+                navController = navController,
+                viewModel = viewModel
+            )
+        }
     }
 }
 

@@ -52,8 +52,6 @@ fun MediumRecipeCard(
     val isFavorite = remember { mutableStateOf(false) }
 
 
-
-
     Card(
         modifier = Modifier
             .height(300.dp)
@@ -78,26 +76,31 @@ fun MediumRecipeCard(
 
 
             Card(
-                modifier = Modifier.fillMaxWidth().height(200.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(200.dp),
                 shape = MaterialTheme.shapes.large
-            ){
+            ) {
                 AsyncImage(
                     model = image,
                     contentDescription = title,
                     contentScale = ContentScale.Crop,
-                    modifier = Modifier.fillMaxWidth().height(200.dp)
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(200.dp)
                 )
             }
 
             Spacer(modifier = Modifier.height(14.dp))
             Box(
                 modifier = Modifier
-                    .fillMaxSize().padding(horizontal = 20.dp),
+                    .fillMaxSize()
+                    .padding(horizontal = 20.dp),
             ) {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
-                ){
+                ) {
                     Column {
                         Text(
                             text = title,
@@ -112,42 +115,44 @@ fun MediumRecipeCard(
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Normal,
                             color = MaterialTheme.customColors.subtitle,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
                         )
                         Text(
                             text = "45min",
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Normal,
                             color = MaterialTheme.customColors.subtitle,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
                         )
                     }
 
-                    if (isFavorite.value){
+                    if (isFavorite.value) {
                         Icon(
-                            modifier = Modifier.size(30.dp).clickable {
-                                isFavorite.value = false
-                                isClicked.invoke(false)
-                            },
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clickable {
+                                    isFavorite.value = false
+                                    isClicked.invoke(false)
+                                    //Call to room database to remove
+                                },
                             imageVector = Icons.Default.Bookmark,
                             contentDescription = "Remove from favorites",
                             tint = MaterialTheme.customColors.special
                         )
-                    }else{
+                    } else {
                         Icon(
-                            modifier = Modifier.size(30.dp).clickable {
-                                isFavorite.value = true
-                                isClicked.invoke(true)
-                            },
+                            modifier = Modifier
+                                .size(30.dp)
+                                .clickable {
+                                    isFavorite.value = true
+                                    isClicked.invoke(true)
+                                    //Call to room database to added
+                                },
                             imageVector = Icons.Default.BookmarkBorder,
                             contentDescription = "make it fav",
                         )
                     }
 
                 }
-                
+
 
             }
 

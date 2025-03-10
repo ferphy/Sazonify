@@ -17,11 +17,12 @@ fun <T> DisplayRecipesRow(
     content: @Composable (T) -> Unit,
 ) {
     when {
-        recipes.loading == true -> {
+
+        recipes.loading == true -> { //Loading
             CircularProgressIndicator()
         }
 
-        recipes.e != null -> { // ❌ Manejo de errores
+        recipes.e != null -> { // Error manager
             Text(
                 text = "Error: ${recipes.e}",
                 color = Color.Red,
@@ -29,7 +30,7 @@ fun <T> DisplayRecipesRow(
             )
         }
 
-        recipes.data == null || (recipes.data is List<*> && (recipes.data as List<*>).isEmpty()) -> {// ℹ️ Lista vacía
+        recipes.data == null || (recipes.data is List<*> && (recipes.data as List<*>).isEmpty()) -> {// No data
             Text(
                 text = "No recipes available",
                 color = MaterialTheme.customColors.title,
@@ -37,7 +38,7 @@ fun <T> DisplayRecipesRow(
             )
         }
 
-        else -> { //Si tenemos datos!!
+        else -> { //Here we have the data
             content(recipes.data!!)
         }
     }

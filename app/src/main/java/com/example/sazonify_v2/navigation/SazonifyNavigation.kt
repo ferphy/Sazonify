@@ -7,10 +7,13 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.example.sazonify_v2.screens.detail.DetailScreen
+import com.example.sazonify_v2.screens.detail.DetailViewModel
+import com.example.sazonify_v2.screens.grocery.GroceryScreen
 import com.example.sazonify_v2.screens.home.HomeScreen
 import com.example.sazonify_v2.screens.home.HomeViewModel
-import com.example.sazonify_v2.screens.search.SearchScreen
-import com.example.sazonify_v2.screens.search.SearchViewModel
+import com.example.sazonify_v2.screens.results.ResultScreen
+import com.example.sazonify_v2.screens.results.ResultsViewModel
+import com.example.sazonify_v2.screens.savedRecipes.SavedRecipesScreen
 
 @Composable
 fun SazonifyNavigation() {
@@ -31,23 +34,35 @@ fun SazonifyNavigation() {
         composable<DetailScreenRoute> {
 
             val argsDetail = it.toRoute<DetailScreenRoute>()
+            val viewModel: DetailViewModel = hiltViewModel()
 
             DetailScreen(
                 navController = navController,
-                recipeId = argsDetail.recipeId
+                recipeId = argsDetail.recipeId,
+                viewModel = viewModel
             )
         }
-        composable<SearchScreenRoute> {
+        composable<ResultsScreenRoute> {
 
-            val viewModel: SearchViewModel = hiltViewModel()
+            val viewModel: ResultsViewModel = hiltViewModel()
+            val argsSearch = it.toRoute<ResultsScreenRoute>()
 
-            val argsSearch = it.toRoute<SearchScreenRoute>()
-            SearchScreen(
+            ResultScreen(
                 navController = navController,
                 title = argsSearch.title,
                 viewModel = viewModel
             )
         }
+
+        composable<GroceryScreenRoute> {
+            GroceryScreen(navController = navController)
+        }
+
+        composable<SavedRecipesScreenRoute> {
+            SavedRecipesScreen(navController = navController)
+        }
+
+
 
     }
 }

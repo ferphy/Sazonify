@@ -17,11 +17,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.sazonify_v2.R
-import com.example.sazonify_v2.navigation.SearchScreenRoute
+import com.example.sazonify_v2.navigation.ResultsScreenRoute
 import com.example.sazonify_v2.ui.theme.customColors
 
 
@@ -63,7 +62,7 @@ fun TitleWithViewAll(
                     .padding(end = 8.dp)
                     .clickable {
                         navController.navigate(
-                            SearchScreenRoute(
+                            ResultsScreenRoute(
                                 title
                             )
                         )

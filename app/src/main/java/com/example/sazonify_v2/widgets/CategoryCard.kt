@@ -22,10 +22,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import coil.compose.AsyncImage
 import com.example.sazonify_v2.R
-import com.example.sazonify_v2.navigation.DetailScreenRoute
-import com.example.sazonify_v2.navigation.SearchScreenRoute
+import com.example.sazonify_v2.navigation.ResultsScreenRoute
 
 @Preview(showBackground = true)
 @Composable
@@ -45,7 +43,7 @@ fun CategoryCard(
             modifier = Modifier
                 .size(200.dp)
                 .clickable {
-                    navController.navigate(SearchScreenRoute(
+                    navController.navigate(ResultsScreenRoute(
                         title = title
                     ))
                 },

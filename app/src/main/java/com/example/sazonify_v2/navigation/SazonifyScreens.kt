@@ -11,6 +11,12 @@ data class DetailScreenRoute(
 )
 
 @Serializable
-data class SearchScreenRoute(
+data class ResultsScreenRoute(
     val title: String,
 )
+
+@Serializable
+data object GroceryScreenRoute{}
+
+@Serializable
+data object SavedRecipesScreenRoute{}
