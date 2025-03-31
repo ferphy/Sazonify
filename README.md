@@ -115,7 +115,6 @@ set SPOONACULAR_API_KEY=your_api_key_here
 
 ## 🌟 Upcoming Features
 
-- Save recipes as favorites.
 - Dark mode.
 - Automatically generated shopping list.
 - Multi-language support.
